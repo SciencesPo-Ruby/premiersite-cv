@@ -1,0 +1,37 @@
+<%= form_with(model: projet, local: true) do |form| %>
+  <% if projet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(projet.errors.count, "error") %> prohibited this projet from being saved:</h2>
+
+      <ul>
+        <% projet.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :date_debut %>
+    <%= form.text_field :date_debut %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_fin %>
+    <%= form.text_field :date_fin %>
+  </div>
+
+  <div class="field">
+    <%= form.label :titre %>
+    <%= form.text_field :titre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
