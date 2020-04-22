@@ -10,6 +10,7 @@ bundle install
 # Récupération du code
 cd /workspace
 git clone https://github.com/SciencesPo-Ruby/premiersite-cv.git
+heroku git:remote -a prenom-nom # au format du projet Heroku
 
 # Préparation et transmission du code
 cd /workspace/premiersite-cv
