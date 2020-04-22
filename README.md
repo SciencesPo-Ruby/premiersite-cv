@@ -8,9 +8,11 @@ gem install pg
 bundle install
 
 # Récupération du code
+cd /workspace
 git clone https://github.com/SciencesPo-Ruby/premiersite-cv.git
 
 # Préparation et transmission du code
+cd /workspace/premiersite-cv
 git add .
 git commit -am "make it better"
 git push --set-upstream heroku master --force
