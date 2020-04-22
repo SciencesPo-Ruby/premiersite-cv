@@ -134,71 +134,23 @@
         <h2>
           <i class="fa fa-graduation-cap"></i> Education
         </h2>
+		<% Education.all.each do |education| %>
         <section class="blocks">
           <div class="date">
-            <span>2009</span><span>2014</span>
+            <span><%= education.date_debut %></span><span><%= education.date_fin %></span>
           </div>
           <div class="decorator">
           </div>
           <div class="details">
             <header>
-              <h3>Ph.D. in Forty-Two Discovery</h3>
-              <span class="place">Inexistent University</span>
-              <span class="location">Some City, Some Country</span>
+              <h3><%= education.titre %></h3>
+              <span class="place"><%= education.institution %></span>
+              <span class="location"><%= education.lieu %></span>
             </header>
-            <div>Relationship of the number with the answer to life, the universe and everything</div>
+            <div><%= education.description %></div>
           </div>
         </section>
-        <section class="blocks">
-          <div class="date">
-            <span>2005</span><span>2009</span>
-          </div>
-          <div class="decorator">
-          </div>
-          <div class="details">
-            <header>
-              <h3>LL.B. in H&aelig;matophagic Economics</h3>
-              <span class="place">Inexistent University</span>
-              <span class="location">Some City, Some Country</span>
-            </header>
-            <div>President's Scholarship</div>
-          </div>
-        </section>
-        <section class="blocks">
-          <div class="date">
-            <span>2005</span><span>2009</span>
-          </div>
-          <div class="decorator">
-          </div>
-          <div class="details">
-            <header>
-              <h3>B.S. in Existential Science (Double Major)</h3>
-              <span class="place">Inexistent University</span>
-              <span class="location">Some City, Some Country</span>
-            </header>
-            <div>President's Scholarship</div>
-          </div>
-        </section>
-        <section class="blocks">
-          <div class="date">
-          </div>
-          <div class="decorator">
-          </div>
-          <div class="details">
-            <header>
-              <h3>Massive Online Fee&ndash;Required Course (selective list)</h3>
-            </header>
-            <div class="concise">
-              <ul>
-                <li>Introduction to something else</li>
-                <li>Introduction to some more useless things</li>
-                <li>Philosophy in practice</li>
-                <li>Recursive research and its impact on recursive research</li>
-                <li>Artificial politics</li>
-              </ul>
-            </div>
-          </div>
-        </section>
+	    <% end %>
       </section>
     </section>
     <aside id="sidebar">

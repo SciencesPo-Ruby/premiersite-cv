@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'pages/cv'
+  root to: 'pages#cv'
   resources :skills
   resources :contacts
   resources :projets

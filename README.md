@@ -1,24 +1,22 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Commandes à saisir dans Goorm :
+```
+# Installation de PostgreSQL
+sudo apt-get install libpq-dev
+gem install pg
+bundle install
 
-Things you may want to cover:
+# A faire une fois pour créer la base de données
+heroku addons:create heroku-postgresql
 
-* Ruby version
+# Préparation et transmission du code
+git add .
+git commit -am "make it better"
+git push --set-upstream heroku master --force
 
-* System dependencies
+# Lancement de la base de données du site
+heroku run rails db:setup
+```
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Votre site sera ensuite accessible et hébergé sur Heroku.
