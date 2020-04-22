@@ -16,7 +16,7 @@ heroku git:remote -a prenom-nom # au format du projet Heroku
 cd /workspace/premiersite-cv
 git add .
 git commit -am "make it better"
-git push --set-upstream heroku master --force
+git push heroku master --force
 
 # Mise à niveau de la base de données du site
 heroku run rails db:migrate
